@@ -1,0 +1,27 @@
+.products__list {
+    width: 280px;
+    min-height: 420px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 224px;
+        min-height: 428px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 370px;
+        min-height: 535px;
+    }
+}
+
+.products__list:nth-child(3n + 1) {
+    background-color: #AEC6A5;
+}
+
+.products__list:nth-child(3n + 2) {
+    background-color: #EFD478;
+}
+
+.products__list:nth-child(3n + 3) {
+    background-color: #D6936D;
+}
+
