@@ -1,5 +1,5 @@
 <header class="header">
-    <div class="container">
+    <div class="container header--container">
     <a class="logo" href="./">
         <picture class="logo__image">
             <source srcset="
@@ -33,7 +33,8 @@
             </ul>
 
     </nav>
-    <button class="open-mob_menu js-open-menu" type="button">
+    <button class="open-mob_menu js-open-menu" type="button" aria-expanded="false"
+            aria-controls="mobile-menu">
       <svg width="40" height="37" class="menu__open">
         <use href="./images/svg/icons.svg#icon-menu-open"></use>
       </svg>
@@ -44,7 +45,8 @@
           </svg>
  
     </button>
-    <div class="mobile-menu js-menu-container">
+    </div>    
+    <div class="menu js-menu-container" id="mobile-menu">
     <a href="./" class="logo">
       <picture class="logo__image">
         <source srcset="
@@ -64,7 +66,7 @@
       </picture>
     </a>
     <button type="button" class="menu__close js-close-menu">
-      <svg width="32" height="32">
+      <svg width="32" height="32" class="menu__icon">
         <use href="./images/svg/icons.svg#icon-menu-close"></use>
       </svg>
     </button>
@@ -78,10 +80,10 @@
     </nav>
     <button type="button" class="open-buy_now">
       buy now
-            <svg width="12" height="12">
+            <svg width="12" height="12" class="menu__icon">
               <use href="./images/svg/icons.svg#vector-btn"></use>
             </svg>
     </button>
     </div>
-    </div>
+
 </header>
