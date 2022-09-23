@@ -1,7 +1,7 @@
 <header class="header">
     <div class="container">
     <a class="logo" href="./">
-        <picture>
+        <picture class="logo__image">
             <source srcset="
                     ./images/desktop/Logo.png 1x,
                     ./images/desktop/Logo-2x.png 2x
@@ -24,29 +24,29 @@
             <img src="./images/mobile/hero/logo.png" alt="logo" width="60">
         </picture>
     </a>
-    <nav>
-            <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="">How it’s made?</a></li>
-              <li><a href="">Our products</a></li>
-              <li><a href="">Contact</a></li>
+    <nav class="nav">
+            <ul class="list">
+              <li><a href="./" class="nav__item">Home</a></li>
+              <li><a href="./" class="nav__item">How it’s made?</a></li>
+              <li><a href="./" class="nav__item">Our products</a></li>
+              <li><a href="./" class="nav__item">Contact</a></li>
             </ul>
 
     </nav>
-    <button class="open-mob_menu js-open-menu">
-      <svg width="40" height="37">
+    <button class="open-mob_menu js-open-menu" type="button">
+      <svg width="40" height="37" class="menu__open">
         <use href="./images/svg/icons.svg#icon-menu-open"></use>
       </svg>
     </button>
-    <button>buy now
+    <button type="button" class="modal__btn">buy now
           <svg width="12" height="12">
             <use href="./images/svg/icons.svg#vector-btn"></use>
           </svg>
  
     </button>
     <div class="mobile-menu js-menu-container">
-    <a href="./">
-      <picture>
+    <a href="./" class="logo">
+      <picture class="logo__image">
         <source srcset="
                         ./images/desktop/Logo.png 1x,
                         ./images/desktop/Logo-2x.png 2x
@@ -63,20 +63,20 @@
         <img src="./images/mobile/hero/logo.png" alt="logo" width="60">
       </picture>
     </a>
-    <button class="menu__close js-close-menu">
+    <button type="button" class="menu__close js-close-menu">
       <svg width="32" height="32">
         <use href="./images/svg/icons.svg#icon-menu-close"></use>
       </svg>
     </button>
-    <nav>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">How it’s made?</a></li>
-        <li><a href="">Our products</a></li>
-        <li><a href="">Contact</a></li>
+    <nav class="nav menu__nav">
+      <ul class="list">
+        <li><a href="./" class="menu__item">Home</a></li>
+        <li><a href="./" class="menu__item">How it’s made?</a></li>
+        <li><a href="./" class="menu__item">Our products</a></li>
+        <li><a href="./" class="menu__item">Contact</a></li>
       </ul>
     </nav>
-    <button class="open-buy_now">
+    <button type="button" class="open-buy_now">
       buy now
             <svg width="12" height="12">
               <use href="./images/svg/icons.svg#vector-btn"></use>
