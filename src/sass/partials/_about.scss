@@ -4,7 +4,9 @@
   padding-top: 60px;
   padding-bottom: 0;
   margin-bottom: 42px;
+
   background-color: $bg-color;
+
   @include tablet {
     margin-bottom: 48px;
   }
@@ -12,6 +14,7 @@
     margin-bottom: 60px;
   }
 }
+
 .about__label {
   display: block;
   text-align: center;
@@ -72,4 +75,7 @@
   border-color: transparent;
   width: 162px;
   height: 42px;
+
+.container__about {
+
 }
