@@ -1,5 +1,36 @@
 <header class="header">
     <div class="container">
-        header
+    <a href="./">
+        <picture>
+            <source srcset="
+                    ../images/desktop/Logo.png 1x,
+                    ./images/desktop/Logo-2x.png 2x
+                  "
+                  media="(min-width:1200px)"
+                  sizes="60">
+            <source srcset="
+                    ./images/tablet/hero/logo.png 1x,
+                    ./images/tablet/hero/logo-2x.png.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  sizes="48">
+            <source srcset="
+                    ./images/mobile/hero/logo.png 1x,
+                    ./images/mobile/hero/logo-2x.png 2x
+                  "
+                  media="(min-width:480px)"
+                  sizes="40">
+         
+            <img src="../images/mobile/hero/logo.png" alt="logo">
+        </picture>
+    </a>
+    <button>
+      <svg width="40" height="37">
+        <use href="./"></use>
+      </svg>
+    </button>
+    <div class="mobile-menu">
+      
+    </div>
     </div>
 </header>
