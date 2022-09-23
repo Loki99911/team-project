@@ -1,6 +1,6 @@
 <header class="header">
     <div class="container">
-    <a href="./">
+    <a class="logo" href="./">
         <picture>
             <source srcset="
                     ../images/desktop/Logo.png 1x,
@@ -10,7 +10,7 @@
                   sizes="60">
             <source srcset="
                     ./images/tablet/hero/logo.png 1x,
-                    ./images/tablet/hero/logo-2x.png.jpg 2x
+                    ./images/tablet/hero/logo-2x.png 2x
                   "
                   media="(min-width:768px)"
                   sizes="48">
@@ -24,10 +24,25 @@
             <img src="../images/mobile/hero/logo.png" alt="logo">
         </picture>
     </a>
+    <nav>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">How it’s made?</a></li>
+              <li><a href="">Our products</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+
+    </nav>
     <button class="open-mob_menu js-open-menu">
       <svg width="40" height="37">
         <use href="./"></use>
       </svg>
+    </button>
+    <button>buy now
+          <svg width="12" height="12">
+            <use href="./"></use>
+          </svg>
+ 
     </button>
     <div class="mobile-menu js-menu-container">
     <a href="./">
@@ -49,7 +64,7 @@
       </picture>
     </a>
     <button class="menu__close js-close-menu">
-      <svg width="40" height="37">
+      <svg width="32" height="32">
         <use href="./"></use>
       </svg>
     </button>
@@ -63,7 +78,7 @@
     </nav>
     <button class="open-buy_now">
       Buy now
-            <svg width="40" height="37">
+            <svg width="12" height="12">
               <use href="./"></use>
             </svg>
     </button>
