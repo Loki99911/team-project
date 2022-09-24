@@ -18,6 +18,10 @@
   width: 210px;
   margin-left: auto;
   margin-right: auto;
+
+  @include tablet {
+    width: 454px;
+  }
 }
 .about__label {
   text-align: center;
@@ -29,6 +33,13 @@
   line-height: 1.22;
 
   margin-bottom: 12px;
+
+  @include tablet {
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 1.23;
+    letter-spacing: 0.04em;
+  }
 }
 .about__title-text {
   text-align: center;
@@ -41,51 +52,41 @@
   text-transform: uppercase;
 
   margin-bottom: 32px;
-}
 
-// Need to check
-.about-text {
+  @include tablet {
+    font-size: 34px;
+    line-height: 1.26;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    margin-bottom: 72px;
+  }
+}
+.about-wrap__tablet {
   display: block;
-  width: 220px;
-  margin-top: 62px;
-  margin-bottom: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  align-items: center;
-}
-.about-text__paragraph-1 {
-  font-size: 12px;
-  line-height: 1.76;
-  text-align: center;
-  margin-bottom: 4px;
-  letter-spacing: 0.04em;
-}
-.about-text__paragraph-2 {
-  font-size: 12px;
-  line-height: 1.62;
-  text-align: center;
 
-  letter-spacing: 0em;
+  @include tablet {
+    display: flex;
+    gap: 32px;
+  }
 }
-
-// .about-img {
-//   border-radius: 1038.58px;
-//   object-fit: cover;
-// }
-
 .circle-container {
+  display: block;
   position: relative;
   margin: 0 auto;
   width: 279.3px;
-  @include mobile {
-    width: 480px;
+
+  @include tablet {
+    width: 336px;
+    margin-left: 0;
+    margin-right: 0;
+    // display: flex;
+    // gap: 32px;
   }
 }
 .circle {
   position: relative;
   width: 278.19px;
   height: 278.25px;
-  //   border-radius: 50%;
   background: linear-gradient(
       0deg,
       rgba(248, 210, 78, 0.7),
@@ -94,6 +95,13 @@
     #d9d9d9;
   box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
   border-radius: 140.182px;
+
+  @include tablet {
+    width: 334.65px;
+    height: 330px;
+    border-radius: 165.879px;
+    box-shadow: 0px 5.30813px 19.9055px rgba(153, 114, 23, 0.25);
+  }
 }
 .circle-2 {
   position: absolute;
@@ -107,14 +115,57 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include tablet {
+    width: 334.65px;
+    height: 330px;
+    border-radius: 1228.96px;
+    top: 25.88px;
+  }
+}
+.about-text {
+  display: block;
+  width: 220px;
+  margin-top: 62px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+
+  @include tablet {
+    width: 334px;
+    margin-top: 7px;
+    margin-bottom: 48px;
+  }
+}
+.about-text__paragraph-1 {
+  font-size: 12px;
+  line-height: 1.76;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  @include tablet {
+    text-align: left;
+  }
+}
+.about-text__paragraph-2 {
+  font-size: 12px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0em;
+  margin-top: 4px;
+
+  @include tablet {
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+    text-align: left;
+    margin-top: 8px;
+  }
 }
 .about__btn {
   display: flex;
-  align-items: baseline;
-
   align-items: center;
   justify-content: center;
-  //   text-align: center;
   gap: 5px;
 
   color: $secondary-text-color;
@@ -130,12 +181,26 @@
   margin-right: auto;
   margin-left: auto;
 }
+.about__btn:hover,
+.about__btn:focus {
+  background-color: $green-color;
+}
+.about__btn:focus {
+  color: $main-text-color;
+}
 .about__btn-icon {
   display: inline-block;
-  vertical-align: middle;
-  justify-content: flex-start 
+  justify-content: center;
+  align-items: center;
+
   height: 12px;
   width: 12px;
-  fill: #f8d24e;
-  stroke: #131313;
+  fill: transparent;
+  stroke: currentColor;
 }
+
+// .about__btn-vector {
+//   vertical-align: center;
+//   justify-content: center;
+//   align-items: center;
+// }
