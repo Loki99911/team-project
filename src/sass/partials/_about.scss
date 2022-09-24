@@ -8,17 +8,21 @@
   background-color: $bg-color;
 
   @include tablet {
-    margin-bottom: 48px;
+    margin-bottom: 53px;
   }
   @include desktop {
-    margin-bottom: 60px;
+    margin-bottom: 89px;
   }
 }
-
+.about-title {
+  width: 210px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .about__label {
-  display: block;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0em;
 
   font-weight: 700;
   font-size: 18px;
@@ -26,24 +30,25 @@
 
   margin-bottom: 12px;
 }
-.about__title {
-  display: block;
+.about__title-text {
+  text-align: center;
 
   font-family: 'Seymour One';
-  font-style: normal;
   font-weight: 400;
   font-size: 30px;
   line-height: 1.27;
-  text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
   margin-bottom: 32px;
 }
+
+// Need to check
 .about-text {
   display: block;
   width: 220px;
-  margin-top: 40px;
+  margin-top: 62px;
+  margin-bottom: 20px;
   margin-right: auto;
   margin-left: auto;
   align-items: center;
@@ -53,17 +58,64 @@
   line-height: 1.76;
   text-align: center;
   margin-bottom: 4px;
+  letter-spacing: 0.04em;
 }
 .about-text__paragraph-2 {
   font-size: 12px;
   line-height: 1.62;
   text-align: center;
-  margin-bottom: 20px;
+
+  letter-spacing: 0em;
+}
+
+// .about-img {
+//   border-radius: 1038.58px;
+//   object-fit: cover;
+// }
+
+.circle-container {
+  position: relative;
+  margin: 0 auto;
+  width: 279.3px;
+  @include mobile {
+    width: 480px;
+  }
+}
+.circle {
+  position: relative;
+  width: 278.19px;
+  height: 278.25px;
+  //   border-radius: 50%;
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+  border-radius: 140.182px;
+}
+.circle-2 {
+  position: absolute;
+  //   left: 9.12px;
+  top: 21.82px;
+  width: 278.19px;
+  height: 278.25px;
+  border-radius: 140.182px;
+
+  background-image: url('../images/original-cow.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .about__btn {
   display: flex;
+  align-items: baseline;
+
   align-items: center;
+  justify-content: center;
   text-align: center;
+  gap: 5px;
 
   color: $secondary-text-color;
   font-weight: 600;
@@ -73,6 +125,17 @@
   background-color: $yellow-color;
   border-radius: 10px;
   border-color: transparent;
-  width: 162px;
+  width: 164px;
   height: 42px;
+  margin-right: auto;
+  margin-left: auto;
 }
+// .about__btn-icon {
+//   display: block;
+//   align-items: center;
+//   justify-content: center;
+//   height: 12px;
+//   width: 12px;
+//   fill: #f8d24e;
+//   stroke: tomato;
+// }
