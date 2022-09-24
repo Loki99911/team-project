@@ -20,7 +20,7 @@
 
     @include desktop {
         font-size: 16px;
-    }
+     }
 
 }
 
@@ -122,6 +122,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 32px;
+    margin-top: 39px;
 
     &>li:nth-child(2) {
         margin-top: 16px;
