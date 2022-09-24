@@ -1,16 +1,15 @@
-<section class="about">
+<section class="about" id="about">
     <div class="container about__container">
-        <p class="about__label">tradition and love</p>
-        <h2 class="about__title">how it’s made?</h2>
-
-        <div>
-            <picture>
-                <source srcset="./images/desktop/cow.png 1x, ./images/desktop/cow-2x.png 2x"
-                    media="(min-width: 1200px)">
-                <source srcset="./images/tablet/cow.png 1x, ./images/tablet/cow-2x.png 2x" media="(min-width: 768px)">
-                <source srcset="./images/mobile/cow.png 1x, ./images/mobile/cow-2x.png 2x" media="(min-width: 320px)">
-                <img src="./images/desktop/cow.png" alt="A cow is grazing in the meadow" width="490">
-            </picture>
+        <div class="about-title">
+            <p class="about__label">tradition and love</p>
+            <h2 class="about__title-text">how it’s made?</h2>
+        </div>
+        <div class="about-wrap__tablet">
+            <div class="circle-container">
+                <div class="circle"></div>
+                <div class="circle-2"></div>
+                <span class="bg-img"></span>
+            </div>
 
             <ul class="about-text">
                 <li class="about-text__item">
@@ -31,9 +30,19 @@
                         milkshakes.
                     </p>
                 </li>
+                <li class="about-text__item">
+                    <p class="about-text__paragraph-3">
+                        This is enough to choose ice cream and
+                        coffee for any mood!
+                    </p>
+                </li>
             </ul>
-            <button type="button" class="about__btn">Read more</button>
-
         </div>
+        <button type="button" class="about__btn">Read more<svg class="about__btn-icon" width="12px">
+                <use href="./images/icons.svg#icon-btn-vector-new"></use>
+            </svg>
+        </button>
+
+
     </div>
 </section>
