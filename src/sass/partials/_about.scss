@@ -114,7 +114,7 @@
 
   align-items: center;
   justify-content: center;
-  text-align: center;
+  //   text-align: center;
   gap: 5px;
 
   color: $secondary-text-color;
@@ -130,12 +130,12 @@
   margin-right: auto;
   margin-left: auto;
 }
-// .about__btn-icon {
-//   display: block;
-//   align-items: center;
-//   justify-content: center;
-//   height: 12px;
-//   width: 12px;
-//   fill: #f8d24e;
-//   stroke: tomato;
-// }
+.about__btn-icon {
+  display: inline-block;
+  vertical-align: middle;
+  justify-content: flex-start 
+  height: 12px;
+  width: 12px;
+  fill: #f8d24e;
+  stroke: #131313;
+}
