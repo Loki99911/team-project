@@ -1,5 +1,8 @@
 .products {
     color: $secondary-text-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url('../images/tablet/bgr/bgr-1.png');
 }
 
 .products__pre-title {
@@ -7,10 +10,10 @@
     font-weight: 800;
     font-size: 18px;
     line-height: calc(22/18);
-    // text-align: center;
     text-transform: uppercase;
     display: block;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .products__title {
@@ -24,11 +27,19 @@
     margin-bottom: 148px;
 }
 
+.products__list-holder {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 164px;
+    justify-content: center;
+}
+
 .products__list {
     width: 280px;
     min-height: 420px;
     border-radius: 35px;
-    padding: 123px 40px 110px 40px;
+    padding: 123px 40px 20px 40px;
+    position: relative;
     
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -68,12 +79,35 @@
     content: '';
     background-image: url(".././images/mobile/ice.png");
     display: inline-block;
-    width: 242px;
-    height: 241px;
-    // right: 0;
-    // left: 0;
-    // margin: auto;
-    // position: relative;
+    width: 201px;
+    height: 211px;
+    position: absolute;
+    // top: -105px;
+    // left: 45px;
+    top: -105px;
+    left: 45px;
+}
+
+.products--ice-coffee::before {
+    content: '';
+    background-image: url(".././images/mobile/coffe.png");
+    display: inline-block;
+    width: 201px;
+    height: 211px;
+    position: absolute;
+    top: -105px;
+    left: 45px;
+}
+
+.products--milkshakes::before {
+    content: '';
+    background-image: url(".././images/mobile/coc.png");
+    display: inline-block;
+    width: 201px;
+    height: 211px;
+    position: absolute;
+    top: -105px;
+    left: 45px;
 }
 
 .products__descr {
@@ -81,4 +115,14 @@
     line-height: calc(25/14);
     letter-spacing: 0.04em;
     text-align: center;
+    margin-bottom: 90px;
+}
+
+.products__button-descr {
+    background-color: transparent;
+    border: none;
+    display: block;
+    width: 130px;
+    height: 43px;
+    margin: auto;
 }
