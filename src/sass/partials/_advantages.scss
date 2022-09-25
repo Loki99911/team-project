@@ -1,0 +1,37 @@
+.advantages {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 42px;
+  padding-bottom: 60;
+
+  background-color: $bg-color;
+
+  @include tablet {
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-top: 53px;
+    padding-bottom: 204px;
+  }
+  @include desktop {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.advantages__item {
+  width: 152px;
+}
+.advantages__icon {
+  width: 50px;
+  height: 50px;
+}
+.number {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.23;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-text-color;
+}
