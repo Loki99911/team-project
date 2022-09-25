@@ -6,6 +6,11 @@
     @include tablet {
         padding-bottom: 13px;
     }
+
+    @include desktop {
+
+        padding-top: 120px;
+    }
 }
 
 .footer__list {
