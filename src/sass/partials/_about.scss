@@ -22,6 +22,9 @@
   @include tablet {
     width: 454px;
   }
+  @include desktop {
+    width: 481px;
+  }
 }
 .about__label {
   text-align: center;
@@ -37,6 +40,12 @@
   @include tablet {
     font-weight: 800;
     font-size: 22px;
+    line-height: 1.23;
+    letter-spacing: 0.04em;
+  }
+  @include desktop {
+    font-weight: 800;
+    font-size: 30px;
     line-height: 1.23;
     letter-spacing: 0.04em;
   }
@@ -60,6 +69,12 @@
     white-space: nowrap;
     margin-bottom: 72px;
   }
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+    margin-bottom: 82px;
+  }
 }
 .about-wrap__tablet {
   display: block;
@@ -67,6 +82,9 @@
   @include tablet {
     display: flex;
     gap: 32px;
+  }
+  @include desktop {
+    gap: 100px;
   }
 }
 .circle-container {
@@ -79,8 +97,11 @@
     width: 336px;
     margin-left: 0;
     margin-right: 0;
-    // display: flex;
-    // gap: 32px;
+  }
+  @include desktop {
+    width: 500px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .circle {
@@ -102,6 +123,12 @@
     border-radius: 165.879px;
     box-shadow: 0px 5.30813px 19.9055px rgba(153, 114, 23, 0.25);
   }
+  @include desktop {
+    width: 500px;
+    height: 500px;
+    box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+    border-radius: 50%;
+  }
 }
 .circle-2 {
   position: absolute;
@@ -111,7 +138,7 @@
   height: 278.25px;
   border-radius: 140.182px;
 
-  background-image: url('../images/original-cow.jpeg');
+  background-image: url('../images/cow-2x.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -121,6 +148,15 @@
     height: 330px;
     border-radius: 1228.96px;
     top: 25.88px;
+  }
+  @include desktop {
+    width: 490px;
+    height: 490px;
+    // border-radius: 1852.2px;
+    border-radius: 50%;
+    top: 39px;
+    // left: 8px;
+    right: 8px;
   }
 }
 .about-text {
@@ -137,6 +173,10 @@
     margin-top: 7px;
     margin-bottom: 48px;
   }
+  @include desktop {
+    margin-top: 90px;
+    width: 463px;
+  }
 }
 .about-text__paragraph-1 {
   font-size: 12px;
@@ -146,6 +186,9 @@
 
   @include tablet {
     text-align: left;
+  }
+  @include desktop {
+    font-size: 16px;
   }
 }
 .about-text__paragraph-2 {
@@ -161,17 +204,40 @@
     text-align: left;
     margin-top: 8px;
   }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.94;
+  }
+}
+.about-text__paragraph-3 {
+  display: none;
+
+  @include tablet {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.94;
+    letter-spacing: 0.04em;
+
+    text-align: left;
+    margin-top: 8px;
+  }
+  @include desktop {
+    display: block;
+    font-size: 14px;
+  }
 }
 .about__btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 4.82px;
 
   color: $secondary-text-color;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.29;
+  letter-spacing: 0;
 
   background-color: $yellow-color;
   border-radius: 10px;
@@ -180,6 +246,11 @@
   height: 42px;
   margin-right: auto;
   margin-left: auto;
+
+  @include tablet {
+    margin-right: auto;
+    margin-left: 0;
+  }
 }
 .about__btn:hover,
 .about__btn:focus {
@@ -190,17 +261,9 @@
 }
 .about__btn-icon {
   display: inline-block;
-  justify-content: center;
-  align-items: center;
 
   height: 12px;
   width: 12px;
   fill: transparent;
   stroke: currentColor;
 }
-
-// .about__btn-vector {
-//   vertical-align: center;
-//   justify-content: center;
-//   align-items: center;
-// }
