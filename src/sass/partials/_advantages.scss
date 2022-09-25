@@ -15,17 +15,25 @@
   @include desktop {
     padding-left: 0px;
     padding-right: 0px;
+    padding-top: 89px;
+    padding-bottom: 180px;
   }
 }
-
+.advantages__list {
+  display: block;
+}
 .advantages__item {
-  width: 152px;
+  width: 230px;
 }
 .advantages__icon {
+  display: flex;
   width: 50px;
   height: 50px;
+  margin-right: auto;
+  margin-left: auto;
 }
-.number {
+.advantages__number-1 {
+  display: block;
   font-weight: 700;
   font-size: 48px;
   line-height: 1.23;
@@ -34,4 +42,31 @@
   text-transform: uppercase;
 
   color: $main-text-color;
+
+  margin-top: 16px;
+}
+.advantages__number-2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-text-color;
+
+  margin-top: 16px;
+}
+
+.advantages__text {
+  display: block;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: 0;
+  color: $main-text-color;
+
+  margin-top: 18px;
 }
