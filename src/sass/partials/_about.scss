@@ -7,7 +7,7 @@
   background-color: $bg-color;
 }
 .about-title {
-  width: 210px;
+  min-width: 210px;
   margin-left: auto;
   margin-right: auto;
 
@@ -57,9 +57,13 @@
   text-transform: uppercase;
 
   margin-bottom: 32px;
+  padding-right: 30px;
+  padding-left: 30px;
 
   @include mobile {
     white-space: nowrap;
+    padding-left: 0;
+    padding-right: 0;
   }
   @include tablet {
     font-size: 34px;
@@ -173,21 +177,27 @@
   }
 }
 .about-text {
-  width: 220px;
+  min-width: 220px;
   margin-top: 62px;
   margin-bottom: 20px;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 30px;
+  padding-right: 30px;
 
   align-items: center;
 
   @include mobile {
     width: 440px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   @include tablet {
     width: 334px;
     margin-top: 7px;
     margin-bottom: 48px;
+    padding-left: 0;
+    padding-right: 0;
   }
   @include desktop {
     margin-top: 90px;
