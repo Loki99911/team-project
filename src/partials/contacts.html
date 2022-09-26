@@ -86,10 +86,10 @@
     </ul>
     <ul class="contacts-btn__list">
         <li>
-            <a class="contacts__btn contacts__btn-location" data-contacts-open href="#">Our Locations
+            <button class="contacts__btn contacts__btn-location" data-contacts-open>Our Locations
                 <svg class="contacts__btn-icon">
                     <use href="./images/icons.svg#vector-btn"></use>
-                </svg></a>
+                </svg></button>
         </li>
                 <li>
                     <a class="contacts__btn contacts__btn-franchise" href="#">Franchise
@@ -102,25 +102,33 @@
     </div>
 
 
-     <div class="backdrop is-hidden" data-contacts>
+     <div class="backdrop-contacts contacts-hidden" data-contacts>
         <div class="modal-location">
-            
+            <button type="button" class="modal-cont__close-btn" data-contacts-close>
+            <svg class="modal__btn-img" width="16" height="16">
+                <use href="./images/icons.svg#icon-modal-close"></use>
+            </svg>
+        </button>
             <ul class="modal-location__list">
                 <li class="modal-location__item">
                     <p class="modal-location__text">Our Locations</p>
                 </li>
                 <li class="modal-location__item modal-location__item-img">
-                    <img  width="224" height="199" src="./images/mapsx1.jpg" alt="maps">
+
+                    <picture>
+                        <source width="448" height="260" srcset="./images/maps_desktop.jpg" media="(min-width: 1200px)" />
+                        <source width="448" height="260" srcset="./images/maps_tablet.jpg" media="(min-width: 768px)" />
+                        <source width="224" height="199" srcset="./images/mapsx2.jpg" media="(min-width: 480px)" />
+                        <img src="./images/mapsx1.jpg" alt="maps"/>
+                      </picture>
+
+                    
                 </li class="modal-location__item">
                 <li><a class="modal-location__btn" href="https://www.google.com.ua/maps/@50.4501,30.5234,10z?hl"
                         target="_blank">Open map</a>
                 </li>
             </ul>
         </div>
-        <button type="button" class="modal__close-btn" data-contacts-close>
-            <svg class="modal__btn-img" width="20px" height="20px">
-                <use href="./images/icons.svg#icon-modal-close"></use>
-            </svg>
-        </button>
+        
     </div>
 </section>

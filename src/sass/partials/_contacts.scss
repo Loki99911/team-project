@@ -107,8 +107,9 @@
     color: $lite-orange;
     font-style: normal;
     margin-top: 8px;
+
     &:hover {
-        text-decoration: underline ;
+        text-decoration: underline;
         cursor: pointer;
     }
 }
@@ -255,73 +256,81 @@
     margin-left: 6px;
 }
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
-.backdrop {
+.backdrop-contacts {
     position: fixed;
-    left: 33%;
-    top: 33%;
-  
-    width: 100vw;
-    height: 100vh;
-  
-<<<<<<< Updated upstream
-    transition: opacity 250ms,
-      visibility 250ms;
-  
-=======
-   
->>>>>>> Stashed changes
-    &.is-hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  z-index: 10;
+
+
+    &.contacts-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
     }
-  }
-  .modal-location {
-position: relative;
-display: flex;
-flex-direction: column;
-z-index: 10;
+}
+
+
+.modal-location {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .modal-location__list {
-padding: 28px;
+    padding: 28px;
     display: flex;
-<<<<<<< Updated upstream
     align-items: center;
-=======
-align-items: center;
-background: #FCFCFC;
-border: 2px solid #F8D24E;
-border-radius: 10px;
-flex-direction: column;
+    flex-direction: column;
+    background: #FCFCFC;
+    border: 2px solid #F8D24E;
+    border-radius: 10px;
 
-@include tablet {
-width: 568px;
-height: 458px;
-}
->>>>>>> Stashed changes
+   
+
+    @include desktop {
+        width: 568px;
+        height: 458px;
+    }
 }
 
 .modal-location__text {
     font-family: 'Seymour One';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: calc(24 / 16);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
 
-text-align: center;
+    text-align: center;
 
-color: $secondary-text-color;
-margin-bottom: 20px;
+    color: $secondary-text-color;
+    margin-bottom: 20px;
+
+    @include desktop {
+        font-size: 20px;
+        line-height: calc(28 / 20);
+        margin-bottom: 32px;
+    }
 }
+
+
 
 .modal-location__item-img {
     border-radius: 10px;
     margin-bottom: 24px;
+    object-fit: cover ;
+
+    @include tablet {
+        margin-bottom: 32px;
+
+    }
+
+
 }
 
 .modal-location__btn {
@@ -331,27 +340,39 @@ margin-bottom: 20px;
     font-weight: 600;
     font-size: 12px;
     line-height: calc(15 / 12);
-padding: 12px 34px;
+    padding: 12px 34px;
     display: flex;
     align-items: center;
     text-align: center;
-    
+
     color: $secondary-text-color;
     background-color: $yellow-color;
     border-radius: 10px;
     border: none;
-    cursor: pointer;
+    
+
     &:hover {
         background-color: $green-color;
     }
 }
 
-<<<<<<< Updated upstream
+.modal-cont__close-btn {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    top: 30px;
+    left: 245px;
+
+    @include tablet {
+        top: 35px;
+        left: 474px;
+    }
+
+    @include desktop {
+        top: 42px;
+        left: 527px;
+    }
 
 
-=======
-.modal__close {
-    position: absolute;
     
 }
->>>>>>> Stashed changes
