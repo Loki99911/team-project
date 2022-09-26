@@ -70,7 +70,7 @@
     </ul>
     <ul class="contacts-btn__list">
         <li>
-            <a class="contacts__btn contacts__btn-location" href="#">Our Locations
+            <a class="contacts__btn contacts__btn-location" data-modal-open href="#">Our Locations
                 <svg class="contacts__btn-icon">
                     <use href="./images/icons.svg#vector-btn"></use>
                 </svg></a>
@@ -83,5 +83,28 @@
         </li>
     </ul>
 </div>
+    </div>
+
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal-location">
+            
+            <ul class="modal-location__list">
+                <li class="modal-location__item">
+                    <p class="modal-location__text">Our Locations</p>
+                </li>
+                <li class="modal-location__item modal-location__item-img">
+                    <img  width="224" height="199" src="./images/mapsx1.jpg" alt="maps">
+                </li class="modal-location__item">
+                <li><a class="modal-location__btn" href="https://www.google.com.ua/maps/@50.4501,30.5234,10z?hl"
+                        target="_blank">Open map</a>
+                </li>
+            </ul>
+        </div>
+        <button class="modal__close" type="button" data-modal-close>
+            <svg class="modal-close-icon" width="30" height="30">
+                <use href="./images/icons.svg#icon-modal-close"></use>
+            </svg>
+        </button>
     </div>
 </section>
