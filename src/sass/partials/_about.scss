@@ -140,12 +140,14 @@
   height: 278.25px;
   border-radius: 140.182px;
 
-  background-image: url('./images/cow-2x.jpeg');
-  // background-size: cover;
-  background-size: 278.19px 278.25px;
+  background-image: url('../images/cow-1x-opt.jpeg');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
+  @include retina-bg {
+    background-image: url('../images/cow-2x-opt.jpeg');
+  }
   @include tablet {
     width: 334.65px;
     height: 330px;
