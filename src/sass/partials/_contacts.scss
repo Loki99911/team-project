@@ -109,7 +109,7 @@
     margin-top: 8px;
     &:hover {
         text-decoration: underline ;
-        cursor: pointer;
+        
     }
 }
 
@@ -181,7 +181,7 @@
     font-weight: 600;
     line-height: 1.29;
     display: flex;
-    cursor: pointer;
+    
     border: none;
     outline: transparent;
 }
@@ -255,7 +255,7 @@
     margin-left: 6px;
 }
 
-.backdrop {
+.contacts-backdrop {
     position: fixed;
     left: 0;
     top: 0;
@@ -264,7 +264,11 @@
     height: 100vh;
   
     transition: opacity 250ms,
-      visibility 250ms;
+      visibility 250ms; 
+
+      @include tablet {
+        max-width: 280px;
+      }
   
     &.is-hidden {
       opacity: 0;
@@ -283,6 +287,20 @@
     padding: 28px;
     display: flex;
     align-items: center;
+    background: #FCFCFC;
+border: 2px solid #F8D24E;
+border-radius: 10px;
+flex-direction: column;
+
+@include desktop {
+width: 568px;
+height: 458px;
+
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 }
 
 .modal-location__text {
@@ -318,10 +336,23 @@ margin-bottom: 20px;
     background-color: $yellow-color;
     border-radius: 10px;
     border: none;
-    cursor: pointer;
+    
     &:hover {
         background-color: $green-color ;
     }
+}
+
+.modal__close-location {
+    position: absolute;
+    
+}
+
+.modal-close-icon {
+    display: flex;
+    height: 18px;
+    width: 18px;
+    fill: $secondary-text-color;
+    transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
