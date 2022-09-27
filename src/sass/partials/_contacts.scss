@@ -107,9 +107,10 @@
     color: $lite-orange;
     font-style: normal;
     margin-top: 8px;
+
     &:hover {
-        text-decoration: underline ;
-        
+        text-decoration: underline;
+
     }
 }
 
@@ -181,7 +182,7 @@
     font-weight: 600;
     line-height: 1.29;
     display: flex;
- 
+
     border: none;
     outline: transparent;
 }
@@ -257,23 +258,22 @@
 
 .contacts-backdrop {
     position: fixed;
-    left: 0;
+    width: 100%;
+    height: 100%;
     top: 0;
+    left: 0;
+    overflow-y: scroll;
   
-    width: 100vw;
-    height: 100vh;
-  
-    transition: opacity 250ms,
-      visibility 250ms; 
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    opacity: 1;
+    
 
-      @include tablet {
-        max-width: 280px;
-      }
-  
-    &.is-hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: 0;
+
+    &.contacts-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: none;
     }
 
     &.contacts-fran-hidden {
@@ -283,55 +283,73 @@
     }
 }
 
-
-.modal-location {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .modal-location__list {
     padding: 28px;
     display: flex;
     align-items: center;
     background: #FCFCFC;
-border: 2px solid #F8D24E;
-border-radius: 10px;
-flex-direction: column;
+    border: 2px solid #F8D24E;
+    border-radius: 10px;
+    flex-direction: column;
 
-@include desktop {
-width: 568px;
-height: 458px;
-
-position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@include mobile {
+    width: 280px;
+    height: 365px;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 }
+
+@include tablet {
+    width: 568px;
+    height: 458px;
+
+    
+
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+    @include desktop {
+        width: 568px;
+        height: 458px;
+
+        
+    }
 }
 
 .modal-location__text {
     font-family: 'Seymour One';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: calc(24 / 16);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
 
-text-align: center;
+    text-align: center;
 
-color: $secondary-text-color;
-margin-bottom: 20px;
+    color: $secondary-text-color;
+    margin-bottom: 20px;
 }
 
 .modal-location__item-img {
     border-radius: 10px;
     margin-bottom: 24px;
-    object-fit: cover ;
+    object-fit: cover;
 
     @include tablet {
         margin-bottom: 32px;
 
+    }
+}
+.modal-loc__btn-img {
+     border: none;
+     fill: $secondary-text-color;
+    background-color: transparent;
+    &:hover {
+        fill: brown;
     }
 }
 
@@ -345,93 +363,130 @@ margin-bottom: 20px;
     display: flex;
     align-items: center;
     text-align: center;
-    
+    padding: 12px 34px;
     color: $secondary-text-color;
     background-color: $yellow-color;
     border-radius: 10px;
     border: none;
-    
+
     &:hover {
         background-color: $green-color ;
     }
 }
 
-.modal__close-location {
-    position: absolute;
-    
+.modal-cont__close-btn {
+    position: absolute;;
+    display: flex;
+    fill: $secondary-text-color;
+    transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent;
+
+    @include desktop {
+        top: 20px;
+        right: 20px;
+    }
 }
 
-.modal-close-icon {
+.modal-fran__close-btn {
+    position: absolute;
     display: flex;
-    height: 18px;
-    width: 18px;
+    fill: $secondary-text-color;
+    transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent;
     fill: $secondary-text-color;
     transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
 
     @include desktop {
-        top: 42px;
-        left: 527px;
+        top: 20px;
+        left: 20px;
     }
 }
 
 .modal-fran__form {
-    width: 280px;
-     padding: 28px;   
+   
     background: #FCFCFC;
     border-radius: 10px;
     border: 2px solid #F8D24E;
-display: flex;
-flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+       padding: 28px;
+       
+    @include mobile { 
+ 
+        width: 280px;
+        position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    }
 
-    @include desktop {
-        padding: 32px 60px;
-        width: 568px;
+@include desktop {
+    width: 568px;
+    padding: 32px 60px;
+        
     }
 }
-.modal-fran__title {
 
-
-
-    @include desktop {
-margin: 0 63px 24px;
-font-family: 'Seymour One';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: calc(28 / 20);
-
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #131313;
-
-    }
-}
-.modal-fran__text {
-
-    @include desktop {
+.modal-location-fran {
     
- font-family: 'Montserrat';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.modal-fran__title {
+    font-family: 'Seymour One';
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
-line-height: calc(22 / 16);
+line-height: calc(24 / 16);
+display: flex;
+align-items: center;
+text-align: center;
+margin-bottom: 20px;
 color: #131313;
+
+
+    @include desktop {
+        margin: 0 63px 24px;
+        font-size: 20px;
+        line-height: calc(28 / 20);
+    }
+}
+
+.modal-fran__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    color: $secondary-text-color;
+    margin-bottom: 24px;
+    @include desktop {
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: calc(22 / 16);
+    letter-spacing: 0.02em;
     }
 }
 
 .modal-fran__input-pos {
 
-
+    margin-bottom: 24px;
     @include desktop {
-        margin: 32px 40px; 
+        margin: 32px 40px;
         width: 368px;
 
-        &::placeholder {
-            padding-left: 16px;
-        }
+        
     }
 }
 
@@ -442,13 +497,22 @@ color: #131313;
     border: 1px solid #84A178;
     border-radius: 10px;
     width: 100%;
+    margin-bottom: 12px;
+    &::placeholder {
+        padding-left: 16px;
+        font-size: 12px
+    }
 
     @include desktop {
         height: 42px;
         margin-bottom: 16px;
-        
+
+        &::placeholder {
+            font-size: 14px
+        }
     }
 }
+
 .modal-fran__textarea {
 
     background: rgba(248, 210, 78, 0.1);
@@ -456,25 +520,36 @@ color: #131313;
     border-radius: 10px;
     width: 100%;
 
+    &::placeholder {
+        padding-left: 16px;
+        font-size: 12px
+    }
+
     @include desktop {
-        height: 84px; 
+        height: 84px;
+
+        &::placeholder {
+            font-size: 14px
+        }
     }
 }
 
 .modal-fran__btn {
     background: #F8D24E;
     border-radius: 10px;
-display: block;
-    @include desktop {
+    display: block;
+    border: none; 
+    font-style: normal;
+        color: #131313;
         padding: 12px 34px;
-width: 121px;
-        font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: calc(17 / 14);
-display: block;
-border: none;
-color: #131313;
+        font-size: 14px;
+        line-height: calc(15 / 12);
+       font-weight: 600;
+    @include desktop {
+
+ 
+        font-size: 14px;
+        line-height: calc(17 / 14);
+
     }
 }
