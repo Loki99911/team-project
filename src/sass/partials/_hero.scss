@@ -25,7 +25,7 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url('../images/tablet/hero/line-hero-2x.png');
-      background-size: contain;
+      background-size: 768px;
       background-repeat: no-repeat;
       background-position: bottom;
     }
@@ -41,7 +41,7 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url('../images/desktop/line-points-2x.png');
-      background-size: contain;
+      background-size: 1200px;
       background-repeat: no-repeat;
       background-position: bottom;
     }
@@ -152,7 +152,7 @@
     &--btn {
       color: $secondary-text-color;
       border: 1px solid $yellow-color;
-      border-radius: 4px;
+      border-radius: 10px;
       padding: 5px 10px;
       font-weight: 600;
       font-size: 8px;
@@ -226,20 +226,18 @@
 
   &__tumb-ice {
     position: absolute;
-    left: 9%;
-    bottom: -291px;
+    left: 8%;
+    bottom: -293px;
     @extend .icon-box;
     width: 300px;
 
     animation-name: big-ice;
     animation-duration: 3000ms;
     animation-delay: 1000ms;
+    animation-timing-function: linear;
 
     @include mobile {
-      width: 300px;
-      // height: 400px;
-      bottom: -291px;
-      left: 17%;
+      left: 16%;
     }
 
     @include tablet {
@@ -304,15 +302,17 @@
   &__info-link {
     display: block;
     margin-top: 20px;
-    width: 40px;
+    width: 60px;
     height: 15px;
 
     &:hover .hero__icon {
-      width: 60px;
+      transform: scaleX(1.2);
+      padding-left: 10px;
     }
 
     &:focus .hero__icon {
-      stroke: $main-text-color;
+      transform: scale(1.2);
+      padding-left: 10px;
     }
 
     @include desktop {
@@ -330,11 +330,22 @@
 
 @keyframes big-ice {
   0% {
-    opacity: 0;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  25% {
+    opacity: 0.2;
     transform: scale(0.5);
   }
 
   50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  75% {
+    opacity: 0.5;
     transform: scale(1.5);
   }
 
